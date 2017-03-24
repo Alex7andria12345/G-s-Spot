@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<head>
+  <style>
+   ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+.mySlides {
+      display:none;
+    }
+    .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+    input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
+</head>
+  <nav>
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="Menu.html">Menu</a></li>
+  <li><a href="Contact.html">Contact</a></li>
+  <li><a href="About.html">About</a></li>
+  <li><a href="Gallery.html">Gallery</a></li>
+  <li><a href="Booking.html">Catering/Booking</a></li>
+</ul>
+    </nav>
+<body style="background-color:Grey;">
+ 
+  <center><img src="Logo.png" alt="other" height="250" width="400"></center>
+  <center><h1>Great Food.Better Prices.</h1></center><h2 class="w3-center"></h2>
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="IMG_1486.jpg" style="width:100%">
+  <img class="mySlides" src="IMG_1490.jpg" style="width:100%">
+  <img class="mySlides" src="IMG_1661.jpg" style="width:100%">
+  <img class="mySlides" src="IMG_1684.jpg" style="width:100%">
+  <img class="mySlides" src="IMG_1487.jpg" style="width:100%">
+</div>
+  <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 4 seconds
+}
+</script>
+  <p>Search</p>
+
+<form>
+  <input type="text" name="search" placeholder="Search..">
+</form>
+</body>
+
+</html>
+  
